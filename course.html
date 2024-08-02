@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+        }
+        .navbar {
+            background-color: #004d99;
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .navbar a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?fit=crop&w=1600&h=500') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+            padding: 40px;
+            margin: 20px auto;
+        }
+        .container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+        .container p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button:active {
+            background-color: #004080;
+        }
+        .course-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .section {
+            padding: 40px 20px;
+            background: #ffffff;
+            margin: 20px auto;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+        }
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="course.html">Courses</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="hero">
+        <h1>Explore Our Courses</h1>
+        <p>Join our specialized courses and advance your skills in various domains. Enroll now to kickstart your learning journey!</p>
+    </div>
+    <div class="container">
+        <h2>Featured Courses</h2>
+        <p>Choose from a range of specialized courses designed to enhance your skills and knowledge:</p>
+        <div class="section">
+            <h2>Data Structures & Algorithms (DSA)</h2>
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220519152227/DSA-course-by-Sandeep-Jain-banner.jpg" class="course-image">
+            <p>Master the fundamentals of data structures and algorithms to solve complex problems efficiently.</p>
+        </div>
+        <div class="section">
+            <h2>JavaScript Development</h2>
+            <img src="https://www.classcentral.com/report/wp-content/uploads/2022/06/JavaScript-BCG-Banner-icons.png" alt="JavaScript Course" class="course-image">
+            <p>Learn JavaScript from scratch and build dynamic, interactive web applications with modern frameworks.</p>
+        </div>
+        <div class="section">
+            <h2>Data Analytics</h2>
+            <img src="https://www.masaischool.com/blog/content/images/2023/09/Data-Analyst-Course-Syllabus.png" alt="Data Analytics Course" class="course-image">
+            <p>Gain expertise in data analysis techniques and tools to make data-driven decisions and insights.</p>
+        </div>
+        <div class="section">
+            <h2>Data Science</h2>
+            <img src="https://srmcem.ac.in/images/Datasc-pic-2.png" alt="Data Science Course" class="course-image">
+            <p>Explore the field of data science, including machine learning, statistical analysis, and data visualization.</p>
+        </div>
+        <a href="#" class="button" id="enrollButton">Enroll Now</a>
+    </div>
+    <div class="section">
+        <h2>Student Testimonials</h2>
+        <p>"This course was amazing! The lessons were clear and the projects were really helpful. I feel confident in my web development skills now." - Jane Doe</p>
+        <p>"Excellent course with great instructors. I learned a lot and the certification helped me land a job. Highly recommended!" - John Smith</p>
+        <img src="https://images.unsplash.com/photo-1556740749-9b93878c5b8d?fit=crop&w=600&h=400" alt="Testimonials">
+    </div>
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us using the form below.</p>
+        <form class="contact-form" action="mailto:info@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Web Development Academy. All rights reserved.</p>
+    </div>
+    <script>
+        document.getElementById('enrollButton').addEventListener('click', function(){
+            const url = 'http://localhost:8080/producer/event';
+            const data = {
+                event: "enrollNow"
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                alert("Enrollment query sent!");
+            })
+            .catch(error => {
+                alert('Error: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>

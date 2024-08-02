@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+        }
+        .navbar {
+            background-color: #004d99;
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .navbar a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1593642532976-5c5d3b8ef2f2?fit=crop&w=1600&h=600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+            padding: 40px;
+            margin: 20px auto;
+        }
+        .container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+        .container p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .container ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .container ul li {
+            font-size: 1.1em;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .container ul li:last-child {
+            border-bottom: none;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button:active {
+            background-color: #004080;
+        }
+        .footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="course.html">Course Details</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="hero">
+        <h1>Pricing</h1>
+        <p>Explore our flexible pricing plans tailored to meet your needs.</p>
+    </div>
+    <div class="container">
+        <h2>Pricing Plans</h2>
+        <p>Select a plan that suits you best:</p>
+        <ul>
+            <li><strong>Basic Plan:</strong> $99 - Essential access with key materials.</li>
+            <li><strong>Standard Plan:</strong> $199 - Extended access with extra resources.</li>
+            <li><strong>Premium Plan:</strong> $299 - All features plus personalized mentoring.</li>
+        </ul>
+        <a href="#" class="button" id="pricingButton">Request Pricing Info</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Web Development Academy. All rights reserved.</p>
+    </div>
+    <script>
+        document.getElementById('pricingButton').addEventListener('click', function(){
+            const url = 'http://localhost:8080/producer/event';
+            const data = {
+                event: "pricingInfoRequested"
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                alert("Pricing info requested!");
+            })
+            .catch(error => {
+                alert('Error: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>
